@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                // Partition d'une liste
+                // Divise une liste en deux listes, l'une contenant les éléments inférieurs à un certain seuil, et l'autre les éléments supérieurs ou égaux à ce seuil.
+
+                // Liste à utiliser: [1, 2, 3, 4, 5, 6, 7, 8, 9], Seuil: 5
+                // Résultat attendu: ([1, 2, 3, 4], [5, 6, 7, 8, 9])
+        let liste = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        let seuil = 5;
+        let petit = liste.filter(x => x < seuil);
+        let grand = liste.filter(x => x >= seuil);
+
+        console.log("cette liste contient les éléments inférieurs à 5 [" + petit + "] et cette liste contient les éléments supérieurs à 5 [" + grand + "]"); 
+ 
+        let double = (a) => a * 2
+    
+ </script>
+</body>
+</html>

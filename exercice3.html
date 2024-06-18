@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function compterOccurrences(liste, element) {
+            let compteur = 0;
+            for (let i = 0; i < liste.length; i++) {
+                if (liste[i] === element) {
+                    compteur++;
+                }
+            }
+            return compteur;
+        }
+        const liste = [2, 2, 3, 4, 2, 3, 3, 4, 4, 1, 4];
+        const elementACompter = 4;
+        const occurrences = compterOccurrences(liste, elementACompter);
+        console.log("On retrouve " + occurrences + " fois l'élément : " + elementACompter);
+
+    </script>
+</body>
+</html>

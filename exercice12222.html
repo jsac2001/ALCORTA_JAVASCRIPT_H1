@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let city = {
+        name: "Gotham City",
+        mayor: { givenName: "mère", surname: "nature" },
+        shops: [
+          { name: "Boulangerie", coord: { x: 10, y: 8 }, note: 5 },
+          { name: "Épicerie", coord: { x: 10, y: 10 }, note: 3 },
+          { name: "Mairie", coord: { x: 2, y: 14 }, note: 0 },
+          { name: "Droguerie", coord: { x: 14, y: 8 }, note: 2 },
+        ],
+      };
+
+      city.shops.forEach((shop) => {
+        console.log(shop.name);
+      });
+
+      city.shops.forEach((shop) => {
+        console.log(shop.note);
+      });
+
+      let sum = 0;
+      city.shops.forEach((shop) => {
+        sum += shop.note;
+      });
+
+      let average = sum / city.shops.length;
+      console.log(average);
+
+      let mairie = city.shops.find((shop) => shop.name === "Mairie").coord;
+      let boulangerie = city.shops.find(
+        (shop) => shop.name === "Boulangerie"
+      ).coord;
+
+      let midPoint = {
+        x: (mairie.x + boulangerie.x) / 2,
+        y: (mairie.y + boulangerie.y) / 2,
+      };
+
+      console.log("Coordonnées du point à mi-chemin :", midPoint);
+      city.shops.push({
+        name: "Carrosserie",
+        coord: midPoint,
+        note: 4,
+      });
+      console.log(city.shops)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                // Décompression de données RLE
+                // Prend une liste compressée par RLE et reletruit la liste originale.
+
+                // Liste à utiliser: [(1, 3), (2, 2), (3, 4)]
+                // Résultat attendu: [1, 1, 1, 2, 2, 3, 3, 3, 3]
+
+        function decompressRLE(list) {
+            let decompressed = [];
+            list.forEach(tuple => {
+                for (let i = 0; i < tuple[1]; i++) {
+                    decompressed.push(tuple[0]);
+                }
+            });
+            return decompressed;
+        }
+
+        let encodedList = [[1, 3], [2, 2], [3, 4]];
+        let resultList = decompressRLE(encodedList);
+        console.log(resultList);
+    </script>
+</body>
+</html>

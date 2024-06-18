@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--  // Liste des éléments uniques
+    // Crée une nouvelle liste en supprimant les doublons de la première liste.
+
+    // Liste à utiliser: [1, 2, 2, 3, 2, 4, 5, 5, 6]
+    // Résultat attendu: [1, 2, 3, 4, 5, 6] -->
+
+    <script>
+      //ici la solution avec le Set
+      let originalList = [1, 2, 2, 3, 2, 4, 5, 5, 6];
+      let uniqueList = [...new Set(originalList)];
+      console.log(uniqueList);
+    </script>
+
+    <script>
+      // ici ma deuxième solution
+      let originalList1 = [1, 2, 2, 3, 2, 4, 5, 5, 6];
+      let uniqueList1 = [];
+
+      for (let i = 0; i < originalList1.length; i++) {
+        if (!uniqueList1.includes(originalList1[i])) {
+          uniqueList1.push(originalList1[i]);
+        }
+      }
+
+      console.log(uniqueList1);
+    </script>
+  </body>
+</html>

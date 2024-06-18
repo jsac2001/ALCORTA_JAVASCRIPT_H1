@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                // Compression de données RLE (Run Length Encoding)
+                // Implémente une fonction de compression simple qui prend une liste d'éléments et retourne une liste des éléments avec leur nombre de répétitions consécutives.
+
+                // Liste à utiliser: [1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 3]
+                // Résultat attendu: [(1, 4), (2, 3), (3, 6)]
+
+        function runLengthEncoding(list) {
+            const result = [];
+            let count = 1;
+
+            for (let i = 1; i <= list.length; i++) {
+                if (list[i] === list[i - 1]) {
+                    count++;
+                    continue;
+                }
+
+                result.push([list[i - 1], count]);
+                count = 1;
+                
+            }
+
+            return result;
+        }
+
+        const list = [1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 3];
+        const encode = runLengthEncoding(list);
+        console.log(encode);
+    </script>
+</body>
+</html>

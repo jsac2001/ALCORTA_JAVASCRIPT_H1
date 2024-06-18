@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            // Croisement de deux listes sans doublons
+            // Prend deux listes et crée une nouvelle liste contenant uniquement les éléments communs aux deux listes, sans répéter aucun élément.
+
+            // Listes à utiliser: [1, 2, 3, 4, 5] et [4, 5, 6, 7, 8]
+            // Résultat attendu: [4, 5]
+        const list1 = [1, 2, 3, 4, 5];
+        const list2 = [4, 5, 6, 7, 8];
+
+        const commonElements = list1.filter(element => list2.includes(element));
+
+        console.log(commonElements); 
+
+    </script>
+</body>
+</html>

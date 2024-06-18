@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- /*7. Rotation d'une liste
+    Effectue une rotation des éléments d'une liste vers la gauche ou la droite d'un nombre donné de positions.
+
+    Liste à utiliser: [1, 2, 3, 4, 5], Rotation vers la gauche de 2 positions.
+    Résultat attendu: [3, 4, 5, 1, 2]
+    */ -->
+    <script> 
+        const rotateLeft = (arr, positions) => arr.slice(positions).concat(arr.slice(0, positions));
+        const list = [1, 2, 3, 4, 5];
+        const positions = 2;
+        const rotatedList = rotateLeft(list, positions);
+        console.log(rotatedList);
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+    <!-- // Interclassement de listes
+    // Combine deux listes en alternant un élément de chaque, débutant par la première liste. Si une liste est plus longue, les éléments restants suivront à la fin.
+
+    // Listes à utiliser: [1, 4, 9] et [2, 5, 6, 10, 12]
+    // Résultat attendu: [1, 2, 4, 5, 9, 6, 10, 12] -->
+
+    <script> // solution impérative
+      function listJoiner(list1, list2) {
+        let result = [];
+        let i = 0,
+          j = 0;
+
+        while (i < list1.length || j < list2.length) {
+          if (i < list1.length) {
+            result.push(list1[i]);
+            i++;
+          }
+          if (j < list2.length) {
+            result.push(list2[j]);
+            j++;
+          }
+        }
+
+        return result;
+      }
+
+      const list1 = [1, 4, 9];
+      const list2 = [2, 5, 6, 10, 12];
+      const joinedList = listJoiner(list1, list2);
+      console.log(joinedList);
+    </script>
+        
+
+    <script> // solution déclarative
+        function* interleave(list3, list4) {
+          const maxLength = Math.max(list3.length, list4.length);
+          for (let i = 0; i < maxLength; i++) {
+            if (i < list3.length) {
+              yield list3[i];
+            }
+            if (i < list4.length) {
+              yield list4[i];
+            }
+          }
+        }
+
+        function listJoiner2(list3, list4) {
+          return Array.from(interleave(list3, list4));
+        }
+
+        const list3 = [1, 4, 9];
+        const list4 = [2, 5, 6, 10, 12];
+        const joinedList1 = listJoiner2(list3, list4);
+        console.log(joinedList1);
+
+    </script>
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <script>
+                // Élimination des éléments en doublon suivis
+                // Parcourt une liste et supprime les éléments qui sont identiques à l'élément directement précédent.
+
+                // Liste à utiliser: [1, 2, 2, 1, 4, 3, 3, 3, 2, 2, 5, 5]
+                // Résultat attendu: [1, 2, 1, 4, 3, 2, 5]     
+        let list = [1, 2, 2, 1, 4, 3, 3, 3, 2, 2, 5, 5];
+        let resultat = [];
+
+        for (let i = 0; i < list.length; i++) {
+            if (i === 0 || list[i] !== list[i - 1]) {
+                resultat.push(list[i]);
+            }
+        }
+
+        console.log("voici le tableau qui présente aucun élément se répétant par rapport à son précédent [" + resultat + "]"); 
+    </script>
+</body>
+</html>

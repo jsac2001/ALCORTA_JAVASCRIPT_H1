@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                // Écart maximum dans une liste
+                // Trouve le plus grand écart entre deux éléments consécutifs dans une liste triée.
+
+                // Liste à utiliser: [1, 3, 6, 7, 14]
+                // Résultat attendu: 7 (entre 7 et 14)
+
+        function findMaxGap(list) {
+            let maxGap = 0;
+            for (let i = 0; i < list.length - 1; i++) {
+                let currentGap = list[i + 1] - list[i];
+                if (currentGap > maxGap) {
+                    maxGap = currentGap;
+                }
+            }
+            return maxGap;
+        }
+
+        const list = [1, 3, 6, 7, 14];
+        const maxGap = findMaxGap(list);
+        console.log("l'écart maximal présent dans cette liste est de " + maxGap + " unités");
+    </script>
+</body>
+</html>

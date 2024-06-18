@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                /*
+                Liste des doublons
+                Trouve tous les éléments qui apparaissent plus d'une fois dans une liste et crée une nouvelle liste de ces doublons, sans les répéter.
+
+                Liste à utiliser: [4, 1, 2, 3, 5, 1, 6, 2]
+                Résultat attendu: [1, 2]
+                */
+                function findDuplicates(array) {
+                    const occurrences = {};
+                    array.forEach(item => {
+                        occurrences[item] = (occurrences[item] || 0) + 1;
+                    });
+                    return Object.keys(occurrences).filter(item => occurrences[item] > 1).map(Number);
+                }
+
+                const list = [4, 1, 2, 3, 5, 1, 6, 2];
+                const duplicates = findDuplicates(list);
+                console.log("Les doublons dans la liste sont : ", duplicates);
+
+    </script>
+</body>
+</html>

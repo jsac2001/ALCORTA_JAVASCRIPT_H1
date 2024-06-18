@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                //Crée une nouvelle liste contenant uniquement les nombres evens d'une liste de nombres entiers donnée.
+
+                // Liste à utiliser: [1, 3, 4, 7, 8, 9, 15, 16, 17, 22]
+                // Résultat attendu: [4, 8, 16, 22]
+        let numbers = [1, 3, 4, 7, 8, 9, 15, 16, 17, 22];
+        let even_numbers = []
+        for (i = 0; i <= numbers.length; i++) {
+            if (numbers[i] % 2 === 0){
+                even_numbers.push(numbers[i]);
+            }
+        }
+        console.log(even_numbers)
+    </script>
+</body>
+</html>
